@@ -1,0 +1,233 @@
+/* Shared Styles for FRAMED BY NO */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+:root {
+  --color-black: #111111;
+  --color-dark: #1a1a1a;
+  --color-gray: #666666;
+  --color-light-gray: #ebebeb;
+  --color-border: #111111;
+  --color-white: #ffffff;
+  --font-main: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==================== HEADER ==================== */
+.site-header {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 38px 32px 32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+  text-decoration: none;
+  color: var(--color-black);
+  user-select: none;
+}
+
+.brand-logo .logo-framed {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.brand-logo .logo-by-no {
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.28em;
+  padding-left: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+}
+
+.nav-link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-link.active {
+  color: var(--color-black);
+}
+
+/* ==================== FOOTER ==================== */
+.site-footer {
+  width: 100%;
+  border-top: 5px solid var(--color-black);
+  background-color: var(--color-white);
+  padding: 60px 0 70px 0;
+  margin-top: 100px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-link {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  transition: opacity 0.2s;
+  width: fit-content;
+}
+
+.footer-link:hover {
+  opacity: 0.6;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-center .brand-logo {
+  text-align: center;
+  align-items: center;
+}
+
+.footer-center .brand-logo .logo-framed {
+  font-size: 24px;
+}
+
+.footer-center .brand-logo .logo-by-no {
+  font-size: 18px;
+  letter-spacing: 0.32em;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-info {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-submit {
+  display: inline-block;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 8px 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Mobile responsive menu */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-nav {
+    gap: 28px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-right {
+    align-items: center;
+    text-align: center;
+  }
+}

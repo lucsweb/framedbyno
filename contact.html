@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRAMED BY NO | Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container {
+      max-width: 1240px;
+      margin: 10px auto 0 auto;
+      padding: 0 32px;
+    }
+
+    .contact-page-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-black);
+      margin-bottom: 24px;
+    }
+
+    /* Top form section: centered */
+    .form-wrapper {
+      max-width: 440px;
+      margin: 0 auto 90px auto;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-black);
+      margin-bottom: 6px;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      border: 1px solid var(--color-black);
+      background-color: var(--color-white);
+      padding: 10px 14px;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--color-dark);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: #777777;
+      font-size: 12px;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      border-color: #000000;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-textarea {
+      height: 95px;
+      resize: vertical;
+    }
+
+    .form-submit-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    /* Bottom Section: Two photos on left, bio text on right */
+    .contact-bottom-grid {
+      display: grid;
+      grid-template-columns: 290px 290px 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 80px;
+    }
+
+    .contact-image-wrap {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background-color: #f7f7f7;
+      overflow: hidden;
+    }
+
+    .contact-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Right text container */
+    .contact-bio-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-top: 130px;
+      padding-left: 20px;
+      text-align: right;
+    }
+
+    .bio-text-block {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #2b2b2b;
+      margin-bottom: 24px;
+    }
+
+    .bio-signoff {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-black);
+      margin-top: 10px;
+    }
+
+    /* Left direct contact links at the very bottom */
+    .direct-links-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 60px;
+    }
+
+    .direct-contact-link {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-black);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
+      width: fit-content;
+    }
+
+    .direct-contact-link:hover {
+      opacity: 0.6;
+    }
+
+    @media (max-width: 992px) {
+      .contact-bottom-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .contact-bio-column {
+        grid-column: span 2;
+        padding-top: 24px;
+        padding-left: 0;
+        text-align: right;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        padding: 0 16px;
+      }
+      .form-wrapper {
+        margin-bottom: 50px;
+      }
+      .contact-bottom-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+      .contact-bio-column {
+        grid-column: span 2;
+        padding-top: 20px;
+        padding-left: 0;
+        text-align: right;
+      }
+      .bio-text-block {
+        font-size: 11.5px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .bio-signoff {
+        font-size: 12px;
+      }
+      .direct-links-column {
+        margin-top: 36px;
+        gap: 10px;
+      }
+      .direct-contact-link {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <a href="index.html" class="brand-logo" aria-label="FRAMED BY NO Homepage">
+      <span class="logo-framed">FRAMED</span>
+      <span class="logo-by-no">BY NO</span>
+    </a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">HOME</a>
+      <a href="gallerij.html" class="nav-link">GALLERIJ</a>
+      <a href="contact.html" class="nav-link active">BOOK NOW</a>
+    </nav>
+  </header>
+
+  <!-- Contact Page Main Content -->
+  <main class="contact-container">
+    <h1 class="contact-page-title">CONTACT</h1>
+
+    <!-- Contact Form (Centered top) -->
+    <div class="form-wrapper">
+      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.');">
+        <div class="form-group">
+          <label class="form-label" for="naam">Naam (bedrijf)</label>
+          <input type="text" id="naam" name="naam" class="form-input" placeholder="Jouw naam" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="shoot">Shoot</label>
+          <input type="text" id="shoot" name="shoot" class="form-input" placeholder="Wat wil jij shooten?" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="mail">Mail*</label>
+          <textarea id="mail" name="mail" class="form-textarea" placeholder="Jouw mail" required></textarea>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bottom Section: 2 Photos & Bio Description -->
+    <div class="contact-bottom-grid">
+      <!-- Photo 1: Portrait of Noa in black sweater (High-Res original) -->
+      <div class="contact-image-wrap">
+        <img src="fotografie_afbeeldingen/dscf2743-2-XJLk2UBqeCVW2tP4.jpg" alt="Portret Noa de Jong fotograaf" loading="lazy">
+      </div>
+
+      <!-- Photo 2: Laptop and Camera on cane chair in motion (High-Res original) -->
+      <div class="contact-image-wrap">
+        <img src="fotografie_afbeeldingen/edit-x-studio-baybee-2629-2-mjEGGEBJ0zSgpRDN.jpg" alt="Laptop en camera op stoel bewegingsonscherpte" loading="lazy">
+      </div>
+
+      <!-- Right Bio Column (Right aligned text matching screenshot 3) -->
+      <div class="contact-bio-column">
+        <p class="bio-text-block">
+          Passie voor fotografie, creëren van toffe socials & obsessed met het maken van creative designs.
+        </p>
+        <p class="bio-text-block">
+          Mijn stijl? Retro, funky en altijd met gevoel. Geen standaard kiekjes hier – ik ga voor beelden die blijven plakken. Voor jou, je merk, je socials of gewoon omdat je jezelf eens goed in beeld wilt laten zetten.
+        </p>
+        <p class="bio-text-block">
+          Dus: scroll, kijk rond, voel de vibe. En als je denkt "ja hoor, deze energie wil ik boeken" – stuur me dan een DM of een mailtje
+        </p>
+        <p class="bio-signoff">Liefs Nootje</p>
+      </div>
+    </div>
+
+    <!-- Direct Contact Links -->
+    <div class="direct-links-column">
+      <a href="mailto:nootdejong@gmail.com" class="direct-contact-link">MAIL</a>
+      <a href="tel:0618939353" class="direct-contact-link">BELLEN</a>
+      <a href="https://www.instagram.com/framedbyno/" target="_blank" rel="noopener noreferrer" class="direct-contact-link">INSTAGRAM</a>
+      <a href="https://www.tiktok.com/@framedbyno" target="_blank" rel="noopener noreferrer" class="direct-contact-link">TIKTOK</a>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="index.html" class="footer-link">HOME</a>
+        <a href="gallerij.html" class="footer-link">GALLERY</a>
+        <a href="contact.html" class="footer-link">BOOK HERE</a>
+      </div>
+      <div class="footer-center">
+        <a href="index.html" class="brand-logo" aria-label="FRAMED BY NO Homepage">
+          <span class="logo-framed">FRAMED</span>
+          <span class="logo-by-no">BY NO</span>
+        </a>
+      </div>
+      <div class="footer-right">
+        <span class="footer-info">NOA DE JONG</span>
+        <span class="footer-info">BASED IN DELFT</span>
+        <a href="mailto:nootdejong@gmail.com" class="footer-link">MAIL</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
